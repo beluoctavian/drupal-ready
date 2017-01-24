@@ -1,0 +1,30 @@
+galaxy_info:
+  author: beluoctavian
+  description: A Drupal-ready server (lamp, drush, git, etc)
+  license: license (BSD)
+  min_ansible_version: 1.2
+  platforms:
+  - name: Debian
+    versions:
+    - wheezy
+    - jessie
+  - name: Ubuntu
+    versions:
+    - precise
+    - trusty
+    - xenial
+  galaxy_tags:
+    - web
+    - php
+    - drupal
+
+dependencies:
+  - geerlingguy.mysql
+  - geerlingguy.apache
+  - geerlingguy.php
+  - geerlingguy.php-mysql
+  - geerlingguy.php-memcached
+  - geerlingguy.apache-php-fpm
+  - geerlingguy.git
+  - geerlingguy.composer
+  - geerlingguy.drush

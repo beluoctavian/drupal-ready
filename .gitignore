@@ -1,0 +1,5 @@
+.idea
+inventory.ini
+vars/main.yml
+files/keys/*
+*.retry
