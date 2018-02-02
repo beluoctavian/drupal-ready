@@ -26,5 +26,4 @@ dependencies:
   - geerlingguy.php-memcached
   - geerlingguy.apache-php-fpm
   - geerlingguy.git
-  - geerlingguy.composer
   - geerlingguy.drush
