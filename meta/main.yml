@@ -19,11 +19,14 @@ galaxy_info:
     - drupal
 
 dependencies:
+  - geerlingguy.firewall
+  - geerlingguy.security
   - geerlingguy.mysql
   - geerlingguy.apache
   - geerlingguy.php
   - geerlingguy.php-mysql
   - geerlingguy.php-memcached
   - geerlingguy.apache-php-fpm
+  - geerlingguy.certbot
   - geerlingguy.git
   - geerlingguy.drush
