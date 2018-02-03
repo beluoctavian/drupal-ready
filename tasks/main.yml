@@ -1,2 +1,21 @@
 ---
-# tasks file for drupal-ready
+- hosts: webservers
+  remote_user: root
+  vars_files:
+    - vars/main.yml
+  roles:
+    - { role: geerlingguy.firewall, tags: security }
+    - { role: geerlingguy.security, tags: security }
+    - { role: geerlingguy.mysql, tags: db }
+    - { role: geerlingguy.apache }
+    - { role: geerlingguy.php, tags: php }
+    - { role: geerlingguy.php-mysql, tags: php }
+    - { role: geerlingguy.php-memcached, tags: php }
+    - { role: geerlingguy.apache-php-fpm, tags: php }
+    - { role: geerlingguy.certbot, tags: security }
+    - { role: geerlingguy.git }
+    - { role: geerlingguy.drush }
+  tasks:
+    - name: Set timezone to Europe/Bucharest
+      timezone:
+        name: Europe/Bucharest
