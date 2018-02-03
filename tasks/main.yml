@@ -1,9 +1,12 @@
 ---
 - hosts: webservers
-  remote_user: root
+  become: yes
+  become_user: root
+  become_method: su
   vars_files:
-    - vars/main.yml
+    - ../vars/main.yml
   roles:
+    - { role: kyungw00k.python27 }
     - { role: geerlingguy.firewall, tags: security }
     - { role: geerlingguy.security, tags: security }
     - { role: geerlingguy.mysql, tags: db }

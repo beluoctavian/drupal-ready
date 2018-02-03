@@ -3,10 +3,21 @@ Ansible Role: Drupal-ready
 
 An Ansible Role that installs all packages required to run efficiently a Drupal website.
 
+How to run:
+1. Create the inventory.ini file:
+```
+[webservers]
+94.130.58.71
+```
+
+2. Run the playbook
+`ansible-playbook tasks/main.yml -i inventory.ini --user=username --ask-sudo-pass`
+
 Requirements
 ------------
 
-At this moment all requirements are managed as ansible dependencies so they will be installed automatically.
+Install galaxy requirements:
+`ansible-galaxy install -r requirements.yml`
 
 Role Variables
 --------------
@@ -16,7 +27,18 @@ Role Variables
 Dependencies
 ------------
 
-@todo: A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+* kyungw00k.python27
+* geerlingguy.firewall
+* geerlingguy.security
+* geerlingguy.mysql
+* geerlingguy.apache
+* geerlingguy.php
+* geerlingguy.php-mysql
+* geerlingguy.php-memcached
+* geerlingguy.apache-php-fpm
+* geerlingguy.certbot
+* geerlingguy.git
+* geerlingguy.drush
 
 Example Playbook
 ----------------
