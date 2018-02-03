@@ -1,0 +1,11 @@
+- src: geerlingguy.firewall
+- src: geerlingguy.security
+- src: geerlingguy.mysql
+- src: geerlingguy.apache
+- src: geerlingguy.php
+- src: geerlingguy.php-mysql
+- src: geerlingguy.php-memcached
+- src: geerlingguy.apache-php-fpm
+- src: geerlingguy.certbot
+- src: geerlingguy.git
+- src: geerlingguy.drush
